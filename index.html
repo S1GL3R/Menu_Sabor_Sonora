@@ -13,26 +13,54 @@
     }
 
     header {
-      background-color: #ffcc00;
-      color: #c62828;
-      text-align: center;
-      padding: 1rem;
-      font-size: 2rem;
-      font-weight: bold;
+      background: linear-gradient(to right, #d32f2f, #fbc02d);
+      color: white;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .header-content h1 {
+      font-size: 2.2rem;
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      margin: 0;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .icon {
+      font-size: 2.2rem;
     }
 
     .section {
       padding: 1rem;
     }
 
-    .section-title {
-      background-color: #ffcc00;
-      color: #000;
+    .section-header {
+      background-size: cover;
+      background-position: center;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
       display: inline-block;
       padding: 0.5rem 1rem;
-      font-weight: bold;
-      border-radius: 5px;
-      margin-bottom: 0.5rem;
+      border-radius: 8px;
     }
 
     .menu-grid {
@@ -43,17 +71,28 @@
 
     .menu-item {
       background-color: #424242;
-      padding: 0.75rem 1rem;
+      padding: 1rem;
       border-radius: 8px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1.1rem;
+      flex-direction: column;
+      gap: 0.4rem;
     }
 
-    .menu-item span {
-      color: #ffcc00;
+    .menu-item-title {
+      font-size: 1.2rem;
       font-weight: bold;
+      color: #ffcc00;
+    }
+
+    .menu-item-description {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .menu-item-price {
+      align-self: flex-end;
+      font-weight: bold;
+      color: #fff;
     }
 
     @media (min-width: 768px) {
@@ -67,38 +106,11 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
-    header {
-  background: linear-gradient(to right, #d32f2f, #fbc02d);
-  color: white;
-  padding: 1.5rem 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.header-content h1 {
-  font-size: 2.2rem;
-  font-family: 'Impact', 'Arial Black', sans-serif;
-  margin: 0;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.header-content .icon {
-  font-size: 2.2rem;
-}
-
   </style>
 </head>
 <body>
 
-  <header>
+<header>
   <div class="header-content">
     <span class="icon">🌮</span>
     <h1>El Sabor de Sonora</h1>
@@ -106,70 +118,108 @@
   </div>
 </header>
 
-  <!-- Tacos -->
-  <section class="section">
-    <div class="section-title">🌮 Tacos</div>
-    <div class="menu-grid">
-      <div class="menu-item">Birria <span>$39</span></div>
-      <div class="menu-item">Quesa birria <span>$55</span></div>
-      <div class="menu-item">Rebaye <span>$45</span></div>
-      <div class="menu-item">Caramelo <span>$58</span></div>
-      <div class="menu-item">Tostado <span>$45</span></div>
-      <div class="menu-item">Tostado c/queso <span>$58</span></div>
-      <div class="menu-item">Percherones <span>$195</span></div>
-      <div class="menu-item">Percherones c/queso <span>$210</span></div>
-      <div class="menu-item">Quesadillas Sonora <span>$35</span></div>
+<!-- Tacos -->
+<section class="section">
+  <div class="section-header" style="background-image: url('https://images.unsplash.com/photo-1601924578571-6d0907be5282');">
+    <h2>🌮 Tacos</h2>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <div class="menu-item-title">Birria</div>
+      <div class="menu-item-description">Taco de birria suave y jugosa cocida lentamente con especias sonorenses.</div>
+      <div class="menu-item-price">$39</div>
     </div>
-  </section>
+    <div class="menu-item">
+      <div class="menu-item-title">Quesa Birria</div>
+      <div class="menu-item-description">Taco dorado relleno de queso fundido y birria, acompañado de su consomé.</div>
+      <div class="menu-item-price">$55</div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-title">Rebaye</div>
+      <div class="menu-item-description">Corte selecto de carne asada servido en tortilla de maíz.</div>
+      <div class="menu-item-price">$45</div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-title">Caramelo</div>
+      <div class="menu-item-description">Taco suave relleno de carne asada con queso derretido.</div>
+      <div class="menu-item-price">$58</div>
+    </div>
+  </div>
+</section>
 
-  <!-- Burritos -->
-  <section class="section">
-    <div class="section-title">🌯 Burritos</div>
-    <div class="menu-grid">
-      <div class="menu-item">Deshebrada <span>$40</span></div>
-      <div class="menu-item">Carne c/chile <span>$40</span></div>
-      <div class="menu-item">Frijoles puercos <span>$29</span></div>
+<!-- Burritos -->
+<section class="section">
+  <div class="section-header" style="background-image: url('https://images.unsplash.com/photo-1613145993482-bd2b9235d8da');">
+    <h2>🌯 Burritos</h2>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <div class="menu-item-title">Deshebrada</div>
+      <div class="menu-item-description">Burrito de carne deshebrada sazonada con tomate y chile.</div>
+      <div class="menu-item-price">$40</div>
     </div>
-  </section>
+    <div class="menu-item">
+      <div class="menu-item-title">Carne c/chile</div>
+      <div class="menu-item-description">Clásico burrito sonorense con carne en chile rojo.</div>
+      <div class="menu-item-price">$40</div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-title">Frijoles puercos</div>
+      <div class="menu-item-description">Frijoles refritos con chorizo y manteca, al estilo casero.</div>
+      <div class="menu-item-price">$29</div>
+    </div>
+  </div>
+</section>
 
-  <!-- Platillos Sonorenses -->
-  <section class="section">
-    <div class="section-title">🍽️ Platillos Sonorenses</div>
-    <div class="menu-grid">
-      <div class="menu-item">Caldo de birria <span>$125</span></div>
-      <div class="menu-item">Bichis <span>$15</span></div>
-      <div class="menu-item">Carne Asada <span>$155</span></div>
-      <div class="menu-item">Hamburguesa <span>$115</span></div>
-      <div class="menu-item">Tortas de birria <span>$70</span></div>
-      <div class="menu-item">Tortas de pierna <span>$60</span></div>
-      <div class="menu-item">Tortas de Rebaye <span>$85</span></div>
-      <div class="menu-item">Flautas Sonora <span>$35</span></div>
-      <div class="menu-item">Gallina pinta <span>$100</span></div>
+<!-- Platillos Sonorenses -->
+<section class="section">
+  <div class="section-header" style="background-image: url('https://images.unsplash.com/photo-1631890052180-841d01f7df0e');">
+    <h2>🍽️ Platillos Sonorenses</h2>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <div class="menu-item-title">Caldo de birria</div>
+      <div class="menu-item-description">Un caldo fuerte con trozos de birria y vegetales. Ideal para el alma.</div>
+      <div class="menu-item-price">$125</div>
     </div>
-  </section>
+    <div class="menu-item">
+      <div class="menu-item-title">Carne Asada</div>
+      <div class="menu-item-description">Platillo emblemático del norte con carne asada al carbón y guarniciones.</div>
+      <div class="menu-item-price">$155</div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-title">Gallina pinta</div>
+      <div class="menu-item-description">Tradicional caldo de frijoles con carne y maíz, perfecto para reconfortar.</div>
+      <div class="menu-item-price">$100</div>
+    </div>
+  </div>
+</section>
 
-  <!-- Bebidas -->
-  <section class="section">
-    <div class="section-title">🥤 Bebidas</div>
-    <div class="menu-grid">
-      <div class="menu-item">Sodas</div>
-      <div class="menu-item">Cebada</div>
-      <div class="menu-item">Jamaica</div>
-      <div class="menu-item">Cerveza</div>
-      <div class="menu-item">Café</div>
-    </div>
-  </section>
+<!-- Bebidas -->
+<section class="section">
+  <div class="section-header" style="background-image: url('https://images.unsplash.com/photo-1551022370-7f6afa9675a0');">
+    <h2>🥤 Bebidas</h2>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-item"><div class="menu-item-title">Sodas</div><div class="menu-item-description">Refrescos surtidos bien fríos.</div></div>
+    <div class="menu-item"><div class="menu-item-title">Cebada</div><div class="menu-item-description">Agua fresca de cebada, ligera y refrescante.</div></div>
+    <div class="menu-item"><div class="menu-item-title">Jamaica</div><div class="menu-item-description">Agua de jamaica natural con un toque ácido y dulce.</div></div>
+    <div class="menu-item"><div class="menu-item-title">Cerveza</div><div class="menu-item-description">Cervezas nacionales e importadas.</div></div>
+    <div class="menu-item"><div class="menu-item-title">Café</div><div class="menu-item-description">Café caliente de olla o americano.</div></div>
+  </div>
+</section>
 
-  <!-- Postres -->
-  <section class="section">
-    <div class="section-title">🍰 Postres</div>
-    <div class="menu-grid">
-      <div class="menu-item">Chocoflan</div>
-      <div class="menu-item">Pastel</div>
-      <div class="menu-item">Pastel tres leches</div>
-      <div class="menu-item">Pastel de zarzamora</div>
-    </div>
-  </section>
+<!-- Postres -->
+<section class="section">
+  <div class="section-header" style="background-image: url('https://images.unsplash.com/photo-1586985287773-1c2362f847f7');">
+    <h2>🍰 Postres</h2>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-item"><div class="menu-item-title">Chocoflan</div><div class="menu-item-description">Pastel mixto de flan y chocolate, suave y cremoso.</div></div>
+    <div class="menu-item"><div class="menu-item-title">Pastel tres leches</div><div class="menu-item-description">Clásico pastel empapado en leche condensada, evaporada y crema.</div></div>
+    <div class="menu-item"><div class="menu-item-title">Pastel de zarzamora</div><div class="menu-item-description">Bizcocho suave con zarzamoras frescas y betún cremoso.</div></div>
+  </div>
+</section>
 
 </body>
 </html>
