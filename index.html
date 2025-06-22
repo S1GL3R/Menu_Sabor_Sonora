@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>El Sabor de Sonora</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #2b2b2b;
+      color: #fff;
+    }
+
+    header {
+      background-color: #ffcc00;
+      color: #c62828;
+      text-align: center;
+      padding: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 1rem;
+    }
+
+    .section-title {
+      background-color: #ffcc00;
+      color: #000;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .menu-item {
+      background-color: #424242;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.1rem;
+    }
+
+    .menu-item span {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    @media (min-width: 768px) {
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>El Sabor de Sonora</header>
+
+  <!-- Tacos -->
+  <section class="section">
+    <div class="section-title">🌮 Tacos</div>
+    <div class="menu-grid">
+      <div class="menu-item">Birria <span>$39</span></div>
+      <div class="menu-item">Quesa birria <span>$55</span></div>
+      <div class="menu-item">Rebaye <span>$45</span></div>
+      <div class="menu-item">Caramelo <span>$58</span></div>
+      <div class="menu-item">Tostado <span>$45</span></div>
+      <div class="menu-item">Tostado c/queso <span>$58</span></div>
+      <div class="menu-item">Percherones <span>$195</span></div>
+      <div class="menu-item">Percherones c/queso <span>$210</span></div>
+      <div class="menu-item">Quesadillas Sonora <span>$35</span></div>
+    </div>
+  </section>
+
+  <!-- Burritos -->
+  <section class="section">
+    <div class="section-title">🌯 Burritos</div>
+    <div class="menu-grid">
+      <div class="menu-item">Deshebrada <span>$40</span></div>
+      <div class="menu-item">Carne c/chile <span>$40</span></div>
+      <div class="menu-item">Frijoles puercos <span>$29</span></div>
+    </div>
+  </section>
+
+  <!-- Platillos Sonorenses -->
+  <section class="section">
+    <div class="section-title">🍽️ Platillos Sonorenses</div>
+    <div class="menu-grid">
+      <div class="menu-item">Caldo de birria <span>$125</span></div>
+      <div class="menu-item">Bichis <span>$15</span></div>
+      <div class="menu-item">Carne Asada <span>$155</span></div>
+      <div class="menu-item">Hamburguesa <span>$115</span></div>
+      <div class="menu-item">Tortas de birria <span>$70</span></div>
+      <div class="menu-item">Tortas de pierna <span>$60</span></div>
+      <div class="menu-item">Tortas de Rebaye <span>$85</span></div>
+      <div class="menu-item">Flautas Sonora <span>$35</span></div>
+      <div class="menu-item">Gallina pinta <span>$100</span></div>
+    </div>
+  </section>
+
+  <!-- Bebidas -->
+  <section class="section">
+    <div class="section-title">🥤 Bebidas</div>
+    <div class="menu-grid">
+      <div class="menu-item">Sodas</div>
+      <div class="menu-item">Cebada</div>
+      <div class="menu-item">Jamaica</div>
+      <div class="menu-item">Cerveza</div>
+      <div class="menu-item">Café</div>
+    </div>
+  </section>
+
+  <!-- Postres -->
+  <section class="section">
+    <div class="section-title">🍰 Postres</div>
+    <div class="menu-grid">
+      <div class="menu-item">Chocoflan</div>
+      <div class="menu-item">Pastel</div>
+      <div class="menu-item">Pastel tres leches</div>
+      <div class="menu-item">Pastel de zarzamora</div>
+    </div>
+  </section>
+
+</body>
+</html>
